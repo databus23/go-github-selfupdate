@@ -2,7 +2,6 @@ package selfupdate
 
 import (
 	"context"
-	"errors"
 	"net/http"
 	"os"
 
