@@ -56,9 +56,6 @@ func NewUpdater(config Config) (*Updater, error) {
 		return &Updater{client, ctx}, nil
 	}
 
-	if token == "" {
-		return nil, errors.New("GitHub API token cannot be empty when releases are hosted on GitHub Enterprise instance")
-	}
 	u := config.EnterpriseUploadURL
 	if u == "" {
 		u = config.EnterpriseBaseURL
